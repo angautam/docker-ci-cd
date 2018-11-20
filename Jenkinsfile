@@ -1,6 +1,6 @@
   env.DOCKERHUB_USERNAME = 'angautam'
 
-  node("master") {
+  node("worker0") {
     checkout scm
 
     stage("Unit Test") {
