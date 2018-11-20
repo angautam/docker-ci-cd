@@ -1,6 +1,6 @@
   env.DOCKERHUB_USERNAME = 'angautam'
 
-  node("worker-0") {
+  node("Linux CentOS ANSIBLE") {
     checkout scm
 
     stage("Unit Test") {
