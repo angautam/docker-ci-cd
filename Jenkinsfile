@@ -1,6 +1,6 @@
   env.DOCKERHUB_USERNAME = 'angautam'
 
-  node("worker0") {
+  node("docker-prod") {
     checkout scm
 
     stage("Unit Test") {
