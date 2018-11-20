@@ -1,6 +1,6 @@
-  env.DOCKERHUB_USERNAME = 'sbikram'
+  env.DOCKERHUB_USERNAME = 'angautam'
 
-  node("docker-test") {
+  node("worker-0") {
     checkout scm
 
     stage("Unit Test") {
