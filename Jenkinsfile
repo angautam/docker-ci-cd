@@ -1,13 +1,6 @@
   env.DOCKERHUB_USERNAME = 'angautam'
 
   node("docker-prod") {
-    checkout scm
-
-    stage("Unit Test") {
-      sh "docker run --rm -v ${WORKSPACE}:/go/src/docker-ci-cd golang go test docker-ci-cd -v --run Unit"
-    }
-
-  node("docker-prod") {
     stage("Production") {
       try {
         // Create the service if it doesn't exist otherwise just update the image
